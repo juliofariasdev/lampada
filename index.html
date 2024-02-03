@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lampada</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="img/lampada desligada.jpg" alt="lampada desligada" />
+    </div>
+    <div>
+      <button onclick="onOff()">LIGAR</button>
+    </div>
+
+    <script>
+      let ligado = false;
+      function onOff() {
+        if (ligado) {
+          ligado = false;
+          document.getElementsByTagName("img")[0].alt = "lampada desligada";
+          document.getElementsByTagName("button")[0].innerText = "LIGAR";
+          document.getElementsByTagName("img")[0].src =
+            "img/lampada desligada.jpg";
+          document.getElementsByTagName("body")[0].style =
+            "background-color: black;";
+        } else {
+          ligado = true;
+          document.getElementsByTagName("img")[0].alt = "lampada ligada";
+          document.getElementsByTagName("button")[0].innerText = "DESLIGAR";
+          document.getElementsByTagName("img")[0].src =
+            "img/lampada ligada.jpg";
+          document.getElementsByTagName("body")[0].style =
+            "background-color: white;";
+        }
+      }
+    </script>
+  </body>
+</html>
